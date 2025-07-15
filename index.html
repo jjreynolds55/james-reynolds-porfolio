@@ -1,0 +1,164 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JJ Reynolds | Paid Media Strategist</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    header {
+      background-image: url('header-bg.jpg');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+      animation: fadeIn 2s ease-in;
+    }
+    nav {
+      background: #333;
+      display: flex;
+      justify-content: center;
+      animation: slideDown 1s ease-in-out;
+    }
+    nav a {
+      color: white;
+      padding: 14px 20px;
+      text-decoration: none;
+      display: inline-block;
+      position: relative;
+      transition: background 0.3s, transform 0.3s;
+    }
+    nav a::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      bottom: 10px;
+      width: 0;
+      height: 2px;
+      background: white;
+      transition: all 0.3s ease;
+      transform: translateX(-50%);
+    }
+    nav a:hover {
+      background: #575757;
+      transform: scale(1.1);
+    }
+    nav a:hover::after {
+      width: 60%;
+    }
+    section {
+      padding: 60px 20px;
+      background-size: cover;
+      background-position: center;
+      color: #333;
+      display: none;
+      animation: fadeInSection 1s ease-in;
+    }
+    #home {
+      background-image: url('home-bg.jpg');
+    }
+    #campaigns {
+      background-image: url('campaigns-bg.jpg');
+    }
+    #about {
+      background-image: url('about-bg.jpg');
+    }
+    #contact {
+      background-image: url('contact-bg.jpg');
+    }
+    .cta-button {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.3s;
+      text-decoration: none;
+    }
+    .cta-button:hover {
+      background-color: #0056b3;
+      transform: translateY(-3px);
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes slideDown {
+      from { transform: translateY(-100%); }
+      to { transform: translateY(0); }
+    }
+    @keyframes fadeInSection {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+  <script>
+    function showSection(id) {
+      const sections = document.querySelectorAll('section');
+      sections.forEach(section => {
+        section.style.display = 'none';
+      });
+      const target = document.getElementById(id);
+      if (target) {
+        target.style.display = 'block';
+      }
+    }
+    window.onload = () => {
+      showSection('home');
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>JJ Reynolds</h1>
+    <p>Performance-Driven Paid Media Strategist</p>
+    <a href="#" class="cta-button" onclick="showSection('campaigns')">View Campaigns</a>
+  </header>
+
+  <nav>
+    <a href="#" onclick="showSection('home')">Home</a>
+    <a href="#" onclick="showSection('campaigns')">Campaigns</a>
+    <a href="#" onclick="showSection('about')">About</a>
+    <a href="#" onclick="showSection('contact')">Contact</a>
+  </nav>
+
+  <section id="home">
+    <h2>Home</h2>
+    <p>With a track record of scaling digital campaigns across Meta, Google, TikTok, and Taboola, I specialize in high-quality lead generation for legal and insurance sectors. My strategies are built around minimizing CPBL (Cost Per Billable Lead) while driving measurable, profitable results.</p>
+    <p>More than a media buyer—I'm a full-funnel strategist who thrives on precision, data, and scale.</p>
+  </section>
+
+  <section id="campaigns">
+    <h2>Campaigns</h2>
+    <p>Live campaign performance examples:</p>
+    <ul>
+      <li><strong>Google Ads:</strong> $6.12M spent | 17.8M clicks | Avg CPC: $0.34 — Optimized for high-scale automotive & legal reach.</li>
+      <li><strong>Meta:</strong> $5.16M spent | 253K leads | CPL: $20.41 — Excellent conversion at scale for cold traffic legal funnels.</li>
+      <li><strong>Taboola:</strong> $2.28M spent | CPA: $19.40 — Powered by granular publisher targeting and creative testing.</li>
+    </ul>
+    <p>Each platform is driven by strategic targeting, custom creative, and relentless optimization focused on revenue and downstream quality, not vanity metrics.</p>
+    <a href="past-work.html" class="cta-button">View Full Campaign Reports</a>
+  </section>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I bring 7+ years of hands-on experience in paid media strategy. I’ve built and managed 6-figure monthly campaigns and led teams through growth across the legal, insurance, and financial verticals.</p>
+    <p>If you need someone to own the metrics and scale the pipeline, I’ll be one of the most valuable assets to your performance team.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:jjreynolds55@gmail.com">jjreynolds55@gmail.com</a><br />
+    LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a></p>
+    <a href="mailto:jjreynolds55@gmail.com" class="cta-button">Send Email</a>
+  </section>
+</body>
+</html>
